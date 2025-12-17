@@ -6,63 +6,72 @@
 
 <title>Sampark Lodge</title>
 
-<!-- Elegant serif + bold -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<!-- Premium Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
   margin:0;
-  background:#2b0f1a;
+  background:#1a0a10;
   font-family:'Poppins',sans-serif;
 }
 
+/* Outer frame */
 .frame{
   max-width:420px;
-  margin:16px auto;
-  padding:22px;
-  background:
-    radial-gradient(circle at top,#4a1626,#1b070e);
-  border:4px solid #d4af37;
-  border-radius:20px;
-  box-shadow:0 20px 40px rgba(0,0,0,.6);
+  margin:14px auto;
+  padding:18px;
+  background:url("bg-frame.png") center/cover no-repeat;
+  border-radius:22px;
+  box-shadow:0 20px 45px rgba(0,0,0,.65);
+}
+
+/* Inner readable layer */
+.content{
+  background:rgba(255,255,255,0.88);
+  border-radius:18px;
+  padding:22px 18px;
   text-align:center;
 }
 
+/* Title */
 h1{
   font-family:'Cinzel',serif;
-  color:#f5e6b8;
-  letter-spacing:2px;
   font-size:26px;
-  margin-bottom:6px;
+  letter-spacing:2px;
+  margin:0 0 6px;
+  color:#4b2c0f;
 }
 
+/* Tagline */
 .tagline{
-  color:#e0cfa0;
   font-size:13px;
+  color:#6a4a2f;
   margin-bottom:22px;
 }
 
+/* Buttons */
 .btn{
   display:block;
   margin:14px 0;
   padding:16px;
   border-radius:14px;
   font-size:16px;
-  font-weight:600;
-  color:#fff;
+  font-weight:700;
   text-decoration:none;
-  border:2px solid rgba(255,215,0,.6);
+  color:#fff;
+  border:2px solid rgba(212,175,55,.7);
   box-shadow:
-    inset 0 1px 2px rgba(255,255,255,.25),
-    0 6px 14px rgba(0,0,0,.5);
+    inset 0 1px 2px rgba(255,255,255,.35),
+    0 6px 14px rgba(0,0,0,.45);
 }
 
 .map{
-  background:linear-gradient(145deg,#7a1d2d,#b03a48);
+  background:linear-gradient(145deg,#8b2c2c,#c44a4a);
 }
 
 .review{
-  background:linear-gradient(145deg,#1e3a5f,#2f6fa5);
+  background:linear-gradient(145deg,#243f66,#3d6ea6);
 }
 
 .call{
@@ -70,28 +79,28 @@ h1{
 }
 
 .wifi{
-  background:linear-gradient(145deg,#5a2a7a,#7d3cb5);
+  background:linear-gradient(145deg,#5a2a7a,#8e44ad);
 }
 
 .btn:active{
-  transform:scale(.97);
+  transform:scale(0.97);
 }
 
+/* Footer */
 .footer{
   margin-top:18px;
   font-family:'Cinzel',serif;
   font-size:11px;
-  color:#e7d7a8;
   letter-spacing:1px;
+  color:#5a3a1c;
 }
-
 </style>
 
 <script>
 function wifiAccess(){
   const key = prompt("Enter Wi-Fi Access Key");
   if(key){
-    window.location.href="WIFI_LINK_HERE";
+    window.location.href = "WIFI_LINK_HERE";
   }
 }
 </script>
@@ -101,38 +110,40 @@ function wifiAccess(){
 <body>
 
 <div class="frame">
+  <div class="content">
 
-  <h1>SAMPARK LODGE</h1>
-  <div class="tagline">
-    Comfortable Stay • Easy Access • Extra Parking
+    <h1>SAMPARK LODGE</h1>
+    <div class="tagline">
+      Comfortable Stay • Easy Access • Extra Parking
+    </div>
+
+    <a class="btn map"
+       href="https://www.google.com/maps/dir/?api=1&destination=Sampark+Lodge+Chinsurah+Hooghly">
+       📍 Get Directions
+    </a>
+
+    <a class="btn review"
+       href="https://g.page/r/CXIP9_KZOQYBEBI/review">
+       ⭐ Leave a Review
+    </a>
+
+    <a class="btn call" href="tel:9830779721">
+       📞 Call 9830779721
+    </a>
+
+    <a class="btn call" href="tel:7003642977">
+       📞 Call 7003642977
+    </a>
+
+    <a class="btn wifi" href="javascript:void(0)" onclick="wifiAccess()">
+       📶 Connect to Wi-Fi
+    </a>
+
+    <div class="footer">
+      Thank you for staying with us
+    </div>
+
   </div>
-
-  <a class="btn map"
-     href="https://www.google.com/maps/dir/?api=1&destination=Sampark+Lodge+Chinsurah+Hooghly">
-     📍 Get Directions
-  </a>
-
-  <a class="btn review"
-     href="https://g.page/r/CXIP9_KZOQYBEBI/review">
-     ⭐ Leave a Review
-  </a>
-
-  <a class="btn call" href="tel:9830779721">
-     📞 Call 9830779721
-  </a>
-
-  <a class="btn call" href="tel:7003642977">
-     📞 Call 7003642977
-  </a>
-
-  <a class="btn wifi" href="javascript:void(0)" onclick="wifiAccess()">
-     📶 Connect to Wi-Fi
-  </a>
-
-  <div class="footer">
-    Thank you for staying with us
-  </div>
-
 </div>
 
 </body>
