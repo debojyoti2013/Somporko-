@@ -6,74 +6,92 @@
 
 <title>Sampark Lodge</title>
 
-<!-- Modern bold font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<!-- Elegant serif + bold -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #111, #222);
-  font-family: 'Poppins', sans-serif;
+body{
+  margin:0;
+  background:#2b0f1a;
+  font-family:'Poppins',sans-serif;
 }
 
-.wrapper {
-  max-width: 420px;
-  margin: 20px auto;
-  background: #fdfdfd;
-  border-radius: 18px;
-  padding: 25px 18px 30px;
-  border: 3px solid #d4af37; /* premium gold border */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-  text-align: center;
+.frame{
+  max-width:420px;
+  margin:16px auto;
+  padding:22px;
+  background:
+    radial-gradient(circle at top,#4a1626,#1b070e);
+  border:4px solid #d4af37;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
+  text-align:center;
 }
 
-h1 {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
+h1{
+  font-family:'Cinzel',serif;
+  color:#f5e6b8;
+  letter-spacing:2px;
+  font-size:26px;
+  margin-bottom:6px;
 }
 
-.tagline {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 25px;
+.tagline{
+  color:#e0cfa0;
+  font-size:13px;
+  margin-bottom:22px;
 }
 
-.btn {
-  display: block;
-  padding: 16px;
-  margin: 14px 0;
-  border-radius: 14px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  transition: transform 0.15s ease;
+.btn{
+  display:block;
+  margin:14px 0;
+  padding:16px;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  text-decoration:none;
+  border:2px solid rgba(255,215,0,.6);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.25),
+    0 6px 14px rgba(0,0,0,.5);
 }
 
-.btn:active {
-  transform: scale(0.97);
+.map{
+  background:linear-gradient(145deg,#7a1d2d,#b03a48);
 }
 
-.map { background: linear-gradient(135deg,#2e7d32,#43a047); }
-.review { background: linear-gradient(135deg,#ff8f00,#ffb300); }
-.call { background: linear-gradient(135deg,#1565c0,#1e88e5); }
-.wifi { background: linear-gradient(135deg,#6a1b9a,#8e24aa); }
-
-.footer {
-  font-size: 11px;
-  color: #777;
-  margin-top: 18px;
+.review{
+  background:linear-gradient(145deg,#1e3a5f,#2f6fa5);
 }
+
+.call{
+  background:linear-gradient(145deg,#1f5f3a,#2e8b57);
+}
+
+.wifi{
+  background:linear-gradient(145deg,#5a2a7a,#7d3cb5);
+}
+
+.btn:active{
+  transform:scale(.97);
+}
+
+.footer{
+  margin-top:18px;
+  font-family:'Cinzel',serif;
+  font-size:11px;
+  color:#e7d7a8;
+  letter-spacing:1px;
+}
+
 </style>
 
 <script>
-function wifiAccess() {
-  let key = prompt("Enter Wi-Fi Access Key:");
-  if (key !== null && key !== "") {
-    alert("Access Granted!\nTap OK to connect.");
-    window.location.href = "WIFI_LINK_HERE";
+function wifiAccess(){
+  const key = prompt("Enter Wi-Fi Access Key");
+  if(key){
+    window.location.href="WIFI_LINK_HERE";
   }
 }
 </script>
@@ -82,7 +100,7 @@ function wifiAccess() {
 
 <body>
 
-<div class="wrapper">
+<div class="frame">
 
   <h1>SAMPARK LODGE</h1>
   <div class="tagline">
