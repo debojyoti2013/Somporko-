@@ -3,59 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sampark Lodge</title>
+
+<!-- Modern bold font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  margin: 0;
+  background: linear-gradient(135deg, #111, #222);
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  max-width: 420px;
+  margin: 20px auto;
+  background: #fdfdfd;
+  border-radius: 18px;
+  padding: 25px 18px 30px;
+  border: 3px solid #d4af37; /* premium gold border */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
   text-align: center;
-  padding: 30px 15px;
 }
+
 h1 {
-  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
-p {
+
+.tagline {
+  font-size: 14px;
   color: #555;
   margin-bottom: 25px;
 }
-a {
+
+.btn {
   display: block;
-  margin: 14px auto;
-  padding: 18px;
-  width: 100%;
-  max-width: 420px;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  border-radius: 10px;
+  transition: transform 0.15s ease;
 }
-.map { background: #2e7d32; }
-.review { background: #f57c00; }
-.call { background: #1565c0; }
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.map { background: linear-gradient(135deg,#2e7d32,#43a047); }
+.review { background: linear-gradient(135deg,#ff8f00,#ffb300); }
+.call { background: linear-gradient(135deg,#1565c0,#1e88e5); }
+.wifi { background: linear-gradient(135deg,#6a1b9a,#8e24aa); }
+
+.footer {
+  font-size: 11px;
+  color: #777;
+  margin-top: 18px;
+}
 </style>
+
+<script>
+function wifiAccess() {
+  let key = prompt("Enter Wi-Fi Access Key:");
+  if (key !== null && key !== "") {
+    alert("Access Granted!\nTap OK to connect.");
+    window.location.href = "WIFI_LINK_HERE";
+  }
+}
+</script>
+
 </head>
 
 <body>
 
-<h1>Sampark Lodge</h1>
-<p>Comfortable Stay • Easy Access • Extra Parking</p>
+<div class="wrapper">
 
-<a class="map" href="https://www.google.com/maps/dir/?api=1&destination=Sampark+Lodge+Chinsurah+Hooghly">
-📍 Get Directions
-</a>
+  <h1>SAMPARK LODGE</h1>
+  <div class="tagline">
+    Comfortable Stay • Easy Access • Extra Parking
+  </div>
 
-<a class="review" href="https://g.page/r/CXIP9_KZOQYBEBI/review">
-⭐ Leave a Review
-</a>
+  <a class="btn map"
+     href="https://www.google.com/maps/dir/?api=1&destination=Sampark+Lodge+Chinsurah+Hooghly">
+     📍 Get Directions
+  </a>
 
-<a class="call" href="tel:9830779721">
-📞 Call: 9830779721
-</a>
+  <a class="btn review"
+     href="https://g.page/r/CXIP9_KZOQYBEBI/review">
+     ⭐ Leave a Review
+  </a>
 
-<a class="call" href="tel:7003642977">
-📞 Call: 7003642977
-</a>
+  <a class="btn call" href="tel:9830779721">
+     📞 Call 9830779721
+  </a>
+
+  <a class="btn call" href="tel:7003642977">
+     📞 Call 7003642977
+  </a>
+
+  <a class="btn wifi" href="javascript:void(0)" onclick="wifiAccess()">
+     📶 Connect to Wi-Fi
+  </a>
+
+  <div class="footer">
+    Thank you for staying with us
+  </div>
+
+</div>
 
 </body>
 </html>
